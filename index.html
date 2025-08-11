@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biz Automagic | High-Converting Landing Pages</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: white;
+    }
+    header {
+        text-align: center;
+        padding: 15px 15px 8px;
+    }
+    header img {
+        max-width: 120px;
+        margin-bottom: 8px;
+    }
+    header h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+    header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-top: 4px;
+    }
+    section.offer, section.portfolio, section.products {
+        max-width: 900px;
+        margin: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    section.offer h2, section.portfolio h2, section.products h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    section.offer p, section.products p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        opacity: 0.95;
+    }
+    .cta {
+        background: #06b6d4;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 30px;
+        transition: background 0.3s ease;
+    }
+    .cta:hover {
+        background: #0891b2;
+    }
+    .portfolio-grid, .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .portfolio-item, .product-item {
+        background: #1e293b;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        padding: 20px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    .portfolio-item img {
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+    }
+    .portfolio-item:hover, .product-item:hover {
+        transform: translateY(-5px);
+    }
+    .portfolio-caption, .product-caption {
+        padding-top: 15px;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    section.form-section {
+        background: #111827;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    form {
+        max-width: 500px;
+        margin: auto;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        background: #06b6d4;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    button:hover {
+        background: #0891b2;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        opacity: 0.6;
+    }
+    /* Lightbox styles */
+    #lightbox {
+        position: fixed;
+        top:0; left:0; right:0; bottom:0;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        flex-direction: column;
+        padding: 20px;
+    }
+    #lightbox-img {
+        max-width: 90vw;
+        max-height: 80vh;
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgba(0,0,0,0.9);
+        cursor: pointer;
+        transition: opacity 0.4s ease;
+    }
+    #lightbox-caption {
+        color: #ccc;
+        margin-top: 12px;
+        font-size: 1.1rem;
+        max-width: 90vw;
+        text-align: center;
+        user-select: none;
+    }
+    #lightbox-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        user-select: none;
+        font-weight: 700;
+        line-height: 1;
+    }
+    #lightbox-prev, #lightbox-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 2.5rem;
+        cursor: pointer;
+        user-select: none;
+        font-weight: 700;
+        padding: 5px 10px;
+        background: rgba(0,0,0,0.3);
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+    #lightbox-prev:hover, #lightbox-next:hover {
+        background: rgba(0,0,0,0.7);
+    }
+    #lightbox-prev {
+        left: 20px;
+    }
+    #lightbox-next {
+        right: 20px;
+    }
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="images/automagiclogo.png" alt="Biz Automagic Logo" />
+    <h1>Websites that Book More Appointments and Turn Visitors into Paying Customers</h1>
+    <p>10X ROI — or your money back</p>
+</header>
+
+<section class="offer">
+    <h2>View a Free Sample Tailored to Your Business</h2>
+    <a href="#form" class="cta">Book Your Free Sample</a>
+</section>
+
+<section class="portfolio">
+    <h2>Our Portfolio</h2>
+    <p>Some of our recent high-converting projects for local businesses.</p>
+    <div class="portfolio-grid">
+        <div class="portfolio-item" onclick="openLightbox(0)">
+            <img src="zara-beauty.jpg" alt="Zara Beauty Landing Page" />
+            <div class="portfolio-caption">Zara Beauty — Increased appointment bookings by 72% within 30 days.</div>
+        </div>
+        <div class="portfolio-item" onclick="openLightbox(1)">
+            <img src="bulgani-urban-homes.jpg" alt="Bulgani Urban Homes Landing Page" />
+            <div class="portfolio-caption">Bulgani Urban Homes — Captured 150+ qualified real estate leads in 2 weeks.</div>
+        </div>
+        <div class="portfolio-item" onclick="openLightbox(2)">
+            <img src="elite-fitness.jpg" alt="Elite Fitness Landing Page" />
+            <div class="portfolio-caption">Elite Fitness — Boosted membership signups by 40% in 1 month.</div>
+        </div>
+    </div>
+</section>
+
+<section class="products">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+        <div class="product-item">
+            <h3>Landing Pages</h3>
+            <p>High-converting single-page funnel focused on one offer — appointments, leads or sales.</p>
+        </div>
+        <div class="product-item">
+            <h3>Multi-Page Website</h3>
+            <p>It's like having an online brochure that instantly turns leads into text conversations that go DIRECTLY to your phone.</p>
+        </div>
+        <div class="product-item">
+            <h3>Magic Review Funnel</h3>
+            <p>"Sure I'll leave you a review", but the truth is people forget. We’ll 'gently' remind them for a few weeks until they remember.</p>
+            <p><strong>5-Star Reviews Only</strong> — You can’t make everyone happy, but we’ll take the guesswork out by guiding your customer to leave five stars, every time.</p>
+        </div>
+        <div class="product-item">
+            <h3>One-Click Referrals & Repeat Customers Campaigns</h3>
+            <p>You do good work and your customers love you. Let's remind them to tell their friends.</p>
+            <p>We'll make sure your customers feel cared for with special offers. Just click a button and we'll take care of the rest. No need to hire a marketing team.</p>
+        </div>
+    </div>
+</section>
+
+<section class="form-section" id="form">
+    <h2>Ready to make your business automagic?</h2>
+    <p>We can launch a single-page funnel in 48 hours, optimized for nearby customers and foot traffic.</p>
+    <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="text" id="business" placeholder="Your Business Name" required />
+        <input type="tel" id="phone" placeholder="Your Phone Number" required />
+        <textarea id="message" placeholder="Tell us about your business..." rows="4" required></textarea>
+        <button type="submit">Book a Free Sample</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 Biz Automagic. All rights reserved.
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span id="lightbox-prev" onclick="prevImage()">&#10094;</span>
+    <img id="lightbox-img" src="" alt="Portfolio project image" />
+    <span id="lightbox-next" onclick="nextImage()">&#10095;</span>
+    <div id="lightbox-caption"></div>
+</div>
+
+<script>
+    const images = [
+        "zara-beauty.jpg",
+        "bulgani-urban-homes.jpg",
+        "elite-fitness.jpg"
+    ];
+    const captions = [
+        "Zara Beauty — Increased appointment bookings by 72% within 30 days.",
+        "Bulgani Urban Homes — Captured 150+ qualified real estate leads in 2 weeks.",
+        "Elite Fitness — Boosted membership signups by 40% in 1 month."
+    ];
+    const projectLinks = [
+        "https://zara-beauty.example.com",       // replace with your real URLs
+        "https://bulgani-urban-homes.example.com",
+        "https://elite-fitness.example.com"
+    ];
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        const img = document.getElementById("lightbox-img");
+        const caption = document.getElementById("lightbox-caption");
+        img.src = images[currentIndex];
+        caption.textContent = captions[currentIndex];
+        img.style.opacity = "1";
+        document.getElementById("lightbox").style.display = "flex";
+    }
+
+    document.getElementById("lightbox-img").onclick = function(e) {
+        e.stopPropagation(); // Prevent closing lightbox on image click
+        window.open(projectLinks[currentIndex], "_blank");
+    };
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+    function changeImage(newIndex) {
+        const img = document.getElementById("lightbox-img");
+        const caption = document.getElementById("lightbox-caption");
+        img.classList.add("fade-out");
+        setTimeout(() => {
+            currentIndex = newIndex;
+            img.src = images[currentIndex];
+            caption.textContent = captions[currentIndex];
+            img.classList.remove("fade-out");
+        }, 400);
+    }
+
+    function nextImage() {
+        const newIndex = (currentIndex + 1) % images.length;
+        changeImage(newIndex);
+    }
+
+    function prevImage() {
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        changeImage(newIndex);
+    }
+
+    document.getElementById("lightbox").addEventListener("click", function(e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", function(e) {
+        const lightboxVisible = document.getElementById("lightbox").style.display === "flex";
+        if (!lightboxVisible) return;
+
+        if (e.key === "ArrowRight") {
+            nextImage();
+        } else if (e.key === "ArrowLeft") {
+            prevImage();
+        } else if (e.key === "Escape") {
+            closeLightbox();
+        }
+    });
+
+    // Swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function handleSwipe() {
+        const swipeDistance = touchEndX - touchStartX;
+        const swipeThreshold = 50; // px
+        if (swipeDistance > swipeThreshold) {
+            prevImage();
+        } else if (swipeDistance < -swipeThreshold) {
+            nextImage();
+        }
+    }
+
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    lightboxImg.addEventListener("touchstart", function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    lightboxImg.addEventListener("touchend", function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+
+    // WhatsApp form submit function
+    function sendToWhatsApp() {
+        let name = document.getElementById("name").value;
+        let business = document.getElementById("business").value;
+        let phone = document.getElementById("phone").value;
+        let message = document.getElementById("message").value;
+
+        let whatsappMessage = `Hello, my name is ${name}. My business is ${business}. Phone: ${phone}. Message: ${message}`;
+        let url = `https://wa.me/2348075113950?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>
