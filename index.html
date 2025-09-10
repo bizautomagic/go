@@ -5,110 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Real Estate Landing Pages | Grand Slam Offer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-  <!-- Hero -->
-  <section class="text-center py-20 px-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">Landing Pages That Sell Properties</h1>
-    <p class="text-lg md:text-2xl mb-8">Turn real estate ad clicks into booked viewings in just 7 days — without wasting money on full websites.</p>
-    <a href="#pricing" class="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-100 transition">Get Your Landing Page</a>
-    <p class="mt-4 text-sm italic">⚡ Only 3 new client slots available this month</p>
+<body class="bg-gray-100 text-gray-900">
+
+  <header class="py-4 px-6 fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-2xl font-bold text-indigo-600">Grand Slam Offer</div>
+      <a href="#pricing" class="hidden md:inline-block bg-indigo-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">Get Started</a>
+    </nav>
+  </header>
+
+  <section class="min-h-screen flex items-center justify-center py-20 px-6 bg-gradient-to-br from-indigo-700 to-purple-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+      <svg class="w-full h-full" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 200C250 100 500 0 720 0C940 0 1190 100 1440 200V800H0V200Z" fill="url(#paint0_linear_2_2)"/>
+        <defs>
+          <linearGradient id="paint0_linear_2_2" x1="720" y1="0" x2="720" y2="800" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#4F46E5"/>
+            <stop offset="1" stop-color="#8B5CF6"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="relative z-10 text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Landing Pages That Sell Properties</h1>
+      <p class="text-lg md:text-2xl mb-8 font-light max-w-3xl mx-auto">Turn real estate ad clicks into booked viewings in just 7 days — without wasting money on full websites.</p>
+      <a href="#pricing" class="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">Get Your Landing Page</a>
+      <p class="mt-6 text-sm italic font-light">⚡ Only 3 new client slots available this month</p>
+    </div>
   </section>
 
-  <!-- Why Landing Pages -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10">Why Not a Full Website?</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white p-8 rounded-xl shadow">
-        <h3 class="font-semibold text-xl mb-4">Full Websites</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>❌ Expensive and slow to launch</li>
-          <li>❌ Visitors get distracted browsing</li>
-          <li>❌ Hard to track ad ROI</li>
-          <li>❌ Built for everyone, not one offer</li>
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Not a Full Website?</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-200 transform transition duration-300 hover:scale-105">
+        <h3 class="font-semibold text-2xl mb-4 text-red-600">Full Websites</h3>
+        <ul class="space-y-4 text-gray-700 text-lg">
+          <li class="flex items-start">
+            <span class="mr-3 mt-1 text-xl">❌</span>
+            <span>Expensive and slow to launch</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 mt-1 text-xl">❌</span>
+            <span>Visitors get distracted browsing</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 mt-1 text-xl">❌</span>
+            <span>Hard to track ad ROI</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 mt-1 text-xl">❌</span>
+            <span>Built for everyone, not one offer</span>
+          </li>
         </ul>
       </div>
-      <div class="bg-indigo-50 p-8 rounded-xl shadow">
-        <h3 class="font-semibold text-xl mb-4">Single-Offer Landing Pages</h3>
-        <ul class="space-y-2 text-gray-700">
-          <li>✅ Focused on one property</li>
-          <li>✅ Designed to convert ad clicks into leads</li>
-          <li>✅ Built & launched in 7 days</li>
-          <li>✅ Clear ROI with lead tracking</li>
+      <div class="bg-indigo-50 p-10 rounded-2xl shadow-xl border border-indigo-200 transform transition duration-300 hover:scale-105">
+        <h3 class="font-semibold text-2xl mb-4 text-indigo-700">Single-Offer Landing Pages</h3>
+        <ul class="space-y-4 text-gray-700 text-lg">
+          <li class="flex items-start">
+            <span class="mr-3 mt-1 text-xl text-green-600">✅</span>
+            <span>Focused on one property</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 mt-1 text-xl text-green-600">✅</span>
+            <span>Designed to convert ad clicks into leads</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 mt-1 text-xl text-green-600">✅</span>
+            <span>Built & launched in 7 days</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3 mt-1 text-xl text-green-600">✅</span>
+            <span>Clear ROI with lead tracking</span>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Case Study -->
-  <section class="bg-gray-100 py-16 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10">Case Study: Real Estate Developer</h2>
-      <div class="bg-white rounded-xl shadow p-8 md:flex items-center gap-8">
-        <img src="https://via.placeholder.com/500x300" alt="Landing Page Screenshot" class="rounded-xl shadow-md mb-6 md:mb-0">
-        <div>
-          <h3 class="text-xl font-semibold mb-4">From Zero Online Presence to Full Funnel in 7 Days</h3>
-          <p class="mb-4">We built a single-offer landing page from scratch for a Lagos-based real estate developer. In just one week, they went from having no online presence to a fully functional funnel — complete with lead capture, CRM integration, and ad tracking. This gave them a professional, conversion-ready foundation for running paid campaigns.</p>
-          <p class="mb-4">According to HubSpot, focused landing pages typically convert <strong>10–20% of visitors into leads</strong>, compared to just 2–3% on generic websites. This project was engineered with those benchmarks in mind — optimized headline, mobile-first design, and frictionless inquiry form — to maximize the developer’s chances of success.</p>
+  <section class="bg-gray-50 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Case Study: Real Estate Developer</h2>
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:flex items-center gap-10">
+        <div class="flex-shrink-0 mb-6 md:mb-0 transform transition duration-300 hover:scale-105">
+          <img src="https://via.placeholder.com/600x400" alt="Landing Page Screenshot" class="rounded-xl shadow-lg w-full md:w-auto h-auto">
+        </div>
+        <div class="flex-grow">
+          <h3 class="text-2xl font-bold mb-4">From Zero Online Presence to Full Funnel in 7 Days</h3>
+          <p class="mb-4 text-gray-700">We built a single-offer landing page from scratch for a Lagos-based real estate developer. In just one week, they went from having no online presence to a fully functional funnel — complete with lead capture, CRM integration, and ad tracking. This gave them a professional, conversion-ready foundation for running paid campaigns.</p>
+          <p class="mb-4 text-gray-700">According to HubSpot, focused landing pages typically convert <strong>10–20% of visitors into leads</strong>, compared to just 2–3% on generic websites. This project was engineered with those benchmarks in mind — optimized headline, mobile-first design, and frictionless inquiry form — to maximize the developer’s chances of success.</p>
           <p class="text-sm text-gray-500 italic mb-4">Source: HubSpot Research, 2023</p>
-          <p class="text-indigo-700 font-semibold">Result: A data-backed funnel ready to capture and track every inquiry from day one.</p>
+          <p class="text-indigo-700 font-bold text-lg">Result: A data-backed funnel ready to capture and track every inquiry from day one.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Offer -->
-  <section id="pricing" class="py-16 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">The $2,500 Real Estate Landing Page Package</h2>
-    <p class="text-lg mb-8">One page. One property. More buyers.</p>
-    <div class="bg-white rounded-xl shadow-lg p-10">
-      <ul class="text-left space-y-4 mb-8">
-        <li>✅ Strategy session to define property’s selling point</li>
-        <li>✅ Conversion-focused copywriting & design</li>
-        <li>✅ Mobile-first, fast-loading page</li>
-        <li>✅ CRM & lead form integration</li>
-        <li>✅ Analytics setup to track ad ROI</li>
-        <li>✅ 7-day delivery</li>
+  <section id="pricing" class="py-20 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">The $2,500 Real Estate Landing Page Package</h2>
+    <p class="text-lg md:text-xl mb-8 font-light">One page. One property. More buyers.</p>
+    <div class="bg-white rounded-2xl shadow-2xl p-10 border border-indigo-200">
+      <ul class="text-left space-y-4 mb-8 text-gray-700 text-lg">
+        <li class="flex items-center">
+          <span class="text-indigo-600 text-2xl mr-4">✓</span>
+          <span>Strategy session to define property’s selling point</span>
+        </li>
+        <li class="flex items-center">
+          <span class="text-indigo-600 text-2xl mr-4">✓</span>
+          <span>Conversion-focused copywriting & design</span>
+        </li>
+        <li class="flex items-center">
+          <span class="text-indigo-600 text-2xl mr-4">✓</span>
+          <span>Mobile-first, fast-loading page</span>
+        </li>
+        <li class="flex items-center">
+          <span class="text-indigo-600 text-2xl mr-4">✓</span>
+          <span>CRM & lead form integration</span>
+        </li>
+        <li class="flex items-center">
+          <span class="text-indigo-600 text-2xl mr-4">✓</span>
+          <span>Analytics setup to track ad ROI</span>
+        </li>
+        <li class="flex items-center">
+          <span class="text-indigo-600 text-2xl mr-4">✓</span>
+          <span>7-day delivery</span>
+        </li>
       </ul>
-      <a href="#contact" class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-indigo-700 transition">Book Your Landing Page</a>
-      <p class="mt-4 text-sm text-red-600 font-semibold">⚠️ Spots are limited — only 3 projects accepted each month</p>
+      <a href="#contact" class="bg-indigo-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">Book Your Landing Page</a>
+      <p class="mt-6 text-sm text-red-600 font-semibold animate-pulse">⚠️ Spots are limited — only 3 projects accepted each month</p>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+  <section class="bg-gray-50 py-20 px-6 max-w-5xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
     <div class="space-y-6">
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-semibold text-xl mb-2">Why $2,500?</h3>
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition duration-300 hover:shadow-xl">
+        <h3 class="font-bold text-xl mb-3 text-indigo-700">Why $2,500?</h3>
         <p class="text-gray-700">Because this isn’t just design. You get strategy, copywriting, CRM integration, mobile optimization, analytics, and a page built to directly increase your property sales. A full package designed for ROI.</p>
       </div>
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-semibold text-xl mb-2">How fast is delivery?</h3>
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition duration-300 hover:shadow-xl">
+        <h3 class="font-bold text-xl mb-3 text-indigo-700">How fast is delivery?</h3>
         <p class="text-gray-700">Your landing page is delivered in just 7 days after receiving your property details. Fast enough to keep your marketing momentum going.</p>
       </div>
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-semibold text-xl mb-2">What if I don’t have property photos yet?</h3>
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition duration-300 hover:shadow-xl">
+        <h3 class="font-bold text-xl mb-3 text-indigo-700">What if I don’t have property photos yet?</h3>
         <p class="text-gray-700">No problem. We can use renders, placeholders, or stock photos temporarily. Once your photos are ready, we’ll update the page at no extra cost.</p>
       </div>
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="font-semibold text-xl mb-2">Do you offer ongoing support?</h3>
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition duration-300 hover:shadow-xl">
+        <h3 class="font-bold text-xl mb-3 text-indigo-700">Do you offer ongoing support?</h3>
         <p class="text-gray-700">Yes, I offer optional monthly support and optimization to keep your page converting at its highest potential.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-indigo-600 text-white py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Ready to Sell Your Property Faster?</h2>
-    <p class="mb-8">Let’s build your single-offer landing page and start converting ad clicks into buyers this week.</p>
-    <a href="mailto:hello@youremail.com" class="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-100 transition">Email Me to Get Started</a>
-    <p class="mt-4 text-sm italic">⚡ Secure your slot before this month’s spots run out</p>
+  <section id="contact" class="bg-indigo-700 text-white py-20 px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 drop-shadow">Ready to Sell Your Property Faster?</h2>
+    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">Let’s build your single-offer landing page and start converting ad clicks into buyers this week.</p>
+    <a href="mailto:hello@youremail.com" class="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">Email Me to Get Started</a>
+    <p class="mt-6 text-sm italic font-light">⚡ Secure your slot before this month’s spots run out</p>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-gray-600">
+  <footer class="text-center py-8 text-gray-500 text-sm">
     <p>© 2025 Your Name. Real Estate Landing Page Specialist.</p>
   </footer>
+
 </body>
 </html>
